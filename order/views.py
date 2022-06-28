@@ -4,4 +4,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def list_order(request):
-    return HttpResponse("Order page")
+    return render(request ,'order\list_order.html')
