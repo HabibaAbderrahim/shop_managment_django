@@ -11,10 +11,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Resale a Business Category Flat Bootstrap Responsive Website Template | All Classifieds :: w3layouts</title>
-<link rel="stylesheet" href="{% static css/bootstrap.min.css %}">
-<link rel="stylesheet" href="{% static css/bootstrap-select.css %}">
-<link href="{% static css/style.css" rel="stylesheet" type="text/css" media="all %}" />
-<link rel="stylesheet" type="text/css" href="{% static css/jquery-ui1.css %}">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap-select.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui1.css' %}">
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,15 +24,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
-<link href='{% static //fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css %}'>
-<link href='{% static //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css %}'>
+
+<link href='{% static '//fonts.googleapis.com/css?family=Ubuntu+Condensed' %}' rel='stylesheet' type='text/css'>
+<link href='{% static '//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' %}' rel='stylesheet' type='text/css'>
 <!--//fonts-->	
 <!-- js -->
-<script type="text/javascript" src="{% static js/jquery.min.js %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <!-- js -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="{% static js/bootstrap.min.js %}"></script>
-<script src="{% static js/bootstrap-select.js %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-select.js' %}"></script>
 <script>
   $(document).ready(function () {
     var mySelect = $('#first-disabled2');
@@ -994,7 +996,7 @@ var elem=$('#container ul');
 					<div class="featured-ad">
 						<a href="single.html">
 							<div class="featured-ad-left">
-								<img src="images/f1.jpg" title="ad image" alt="" />
+								<img src="{% static 'images/f1.jpg' %}" title="ad image" alt="" />
 							</div>
 							<div class="featured-ad-right">
 								<h4>Lorem Ipsum is simply dummy text of the printing industry</h4>
@@ -1006,7 +1008,7 @@ var elem=$('#container ul');
 					<div class="featured-ad">
 						<a href="single.html">
 							<div class="featured-ad-left">
-								<img src="images/f2.jpg" title="ad image" alt="" />
+								<img src="{% static 'images/f2.jpg' %}" title="ad image" alt="" />
 							</div>
 							<div class="featured-ad-right">
 								<h4>Lorem Ipsum is simply dummy text of the printing industry</h4>
@@ -1018,7 +1020,7 @@ var elem=$('#container ul');
 					<div class="featured-ad">
 						<a href="single.html">
 							<div class="featured-ad-left">
-								<img src="images/f3.jpg" title="ad image" alt="" />
+								<img src="{% static 'images/f3.jpg' %}" title="ad image" alt="" />
 							</div>
 							<div class="featured-ad-right">
 								<h4>Lorem Ipsum is simply dummy text of the printing industry</h4>
@@ -1073,7 +1075,7 @@ var elem=$('#container ul');
 							<ul class="list">
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$290</span>
@@ -1088,7 +1090,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m2.jpg" title="" alt="" />
+									<img src="{% static 'images/m2.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">It is a long established fact that a reader long established</h5>
 									<span class="adprice">$310</span>
@@ -1103,7 +1105,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m3.jpg" title="" alt="" />
+									<img src="{% static 'images/m3.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Contrary to popular belief, Lorem Ipsum is not</h5>
 									<span class="adprice">$190</span>
@@ -1118,7 +1120,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m4.jpg" title="" alt="" />
+									<img src="{% static 'images/m4.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">The standard chunk of Lorem Ipsum used since the</h5>
 									<span class="adprice">$480</span>
@@ -1133,7 +1135,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m5.jpg" title="" alt="" />
+									<img src="{% static 'images/m5.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h5>
 									<span class="adprice">$859</span>
@@ -1148,7 +1150,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m6.jpg" title="" alt="" />
+									<img src="{% static 'images/m6.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">But I must explain to you how all this mistaken idea of denouncing</h5>
 									<span class="adprice">$1299</span>
@@ -1163,7 +1165,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</h5>
 									<span class="adprice">$1099</span>
@@ -1178,7 +1180,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m7.jpg" title="" alt="" />
+									<img src="{% static 'images/m7.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">On the other hand, we denounce with righteous dislike men</h5>
 									<span class="adprice">$290</span>
@@ -1193,7 +1195,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m8.jpg" title="" alt="" />
+									<img src="{% static 'images/m8.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$899</span>
@@ -1208,7 +1210,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m9.jpg" title="" alt="" />
+									<img src="{% static 'images/m9.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">ducimus qui blanditiis praesentium voluptatum quos dolores et qua</h5>
 									<span class="adprice">$199</span>
@@ -1223,7 +1225,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m10.jpg" title="" alt="" />
+									<img src="{% static 'images/m10.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$250</span>
@@ -1238,7 +1240,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m11.jpg" title="" alt="" />
+									<img src="{% static 'images/m11.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">who are so beguiled and demoralized by the charms of pleasure of the moment</h5>
 									<span class="adprice">$189</span>
@@ -1253,7 +1255,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m12.jpg" title="" alt="" />
+									<img src="{% static 'images/m12.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">you need to be sure there isn't anything embarrassing hidden</h5>
 									<span class="adprice">$1090</span>
@@ -1268,7 +1270,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$290</span>
@@ -1283,7 +1285,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m2.jpg" title="" alt="" />
+									<img src="{% static 'images/m2.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">It is a long established fact that a reader long established</h5>
 									<span class="adprice">$310</span>
@@ -1298,7 +1300,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m3.jpg" title="" alt="" />
+									<img src="{% static 'images/m3.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Contrary to popular belief, Lorem Ipsum is not</h5>
 									<span class="adprice">$190</span>
@@ -1313,7 +1315,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m4.jpg" title="" alt="" />
+									<img src="{% static 'images/m4.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">The standard chunk of Lorem Ipsum used since the</h5>
 									<span class="adprice">$480</span>
@@ -1328,7 +1330,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m5.jpg" title="" alt="" />
+									<img src="{% static 'images/m5.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h5>
 									<span class="adprice">$859</span>
@@ -1343,7 +1345,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m6.jpg" title="" alt="" />
+									<img src="{% static 'images/m6.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">But I must explain to you how all this mistaken idea of denouncing</h5>
 									<span class="adprice">$1299</span>
@@ -1358,7 +1360,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</h5>
 									<span class="adprice">$1099</span>
@@ -1373,7 +1375,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m7.jpg" title="" alt="" />
+									<img src="{% static 'images/m7.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">On the other hand, we denounce with righteous dislike men</h5>
 									<span class="adprice">$290</span>
@@ -1388,7 +1390,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m8.jpg" title="" alt="" />
+									<img src="{% static 'images/m8.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$899</span>
@@ -1403,7 +1405,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m9.jpg" title="" alt="" />
+									<img src="{% static 'images/m9.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">ducimus qui blanditiis praesentium voluptatum quos dolores et qua</h5>
 									<span class="adprice">$199</span>
@@ -1418,7 +1420,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m10.jpg" title="" alt="" />
+									<img src="{% static 'images/m10.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$250</span>
@@ -1433,7 +1435,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m11.jpg" title="" alt="" />
+									<img src="{% static 'images/m11.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">who are so beguiled and demoralized by the charms of pleasure of the moment</h5>
 									<span class="adprice">$189</span>
@@ -1448,7 +1450,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m12.jpg" title="" alt="" />
+									<img src="{% static 'images/m12.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">you need to be sure there isn't anything embarrassing hidden</h5>
 									<span class="adprice">$1090</span>
@@ -1463,7 +1465,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m13.jpg" title="" alt="" />
+									<img src="{% static 'images/m13.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">looked up one of the more obscure Latin words</h5>
 									<span class="adprice">$599</span>
@@ -1503,7 +1505,7 @@ var elem=$('#container ul');
 							<ul class="list">
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$290</span>
@@ -1518,7 +1520,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m2.jpg" title="" alt="" />
+									<img src="{% static 'images/m2.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">It is a long established fact that a reader long established</h5>
 									<span class="adprice">$310</span>
@@ -1533,7 +1535,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m3.jpg" title="" alt="" />
+									<img src="{% static 'images/m3.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Contrary to popular belief, Lorem Ipsum is not</h5>
 									<span class="adprice">$190</span>
@@ -1548,7 +1550,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m4.jpg" title="" alt="" />
+									<img src="{% static 'images/m4.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">The standard chunk of Lorem Ipsum used since the</h5>
 									<span class="adprice">$480</span>
@@ -1563,7 +1565,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m5.jpg" title="" alt="" />
+									<img src="{% static 'images/m5.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h5>
 									<span class="adprice">$859</span>
@@ -1578,7 +1580,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m6.jpg" title="" alt="" />
+									<img src="{% static 'images/m6.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">But I must explain to you how all this mistaken idea of denouncing</h5>
 									<span class="adprice">$1299</span>
@@ -1593,7 +1595,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</h5>
 									<span class="adprice">$1099</span>
@@ -1608,7 +1610,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m7.jpg" title="" alt="" />
+									<img src="{% static 'images/m7.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">On the other hand, we denounce with righteous dislike men</h5>
 									<span class="adprice">$290</span>
@@ -1623,7 +1625,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m8.jpg" title="" alt="" />
+									<img src="{% static 'images/m8.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$899</span>
@@ -1638,7 +1640,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m9.jpg" title="" alt="" />
+									<img src="{% static 'images/m9.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">ducimus qui blanditiis praesentium voluptatum quos dolores et qua</h5>
 									<span class="adprice">$199</span>
@@ -1653,7 +1655,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m10.jpg" title="" alt="" />
+									<img src="{% static 'images/m10.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$250</span>
@@ -1668,7 +1670,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m11.jpg" title="" alt="" />
+									<img src="{% static 'images/m11.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">who are so beguiled and demoralized by the charms of pleasure of the moment</h5>
 									<span class="adprice">$189</span>
@@ -1683,7 +1685,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m12.jpg" title="" alt="" />
+									<img src="{% static 'images/m12.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">you need to be sure there isn't anything embarrassing hidden</h5>
 									<span class="adprice">$1090</span>
@@ -1698,7 +1700,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m13.jpg" title="" alt="" />
+									<img src="{% static 'images/m13.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">looked up one of the more obscure Latin words</h5>
 									<span class="adprice">$599</span>
@@ -1738,7 +1740,7 @@ var elem=$('#container ul');
 							<ul class="list">
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$290</span>
@@ -1753,7 +1755,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m2.jpg" title="" alt="" />
+									<img src="{% static 'images/m2.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">It is a long established fact that a reader long established</h5>
 									<span class="adprice">$310</span>
@@ -1768,7 +1770,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m3.jpg" title="" alt="" />
+									<img src="{% static 'images/m3.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Contrary to popular belief, Lorem Ipsum is not</h5>
 									<span class="adprice">$190</span>
@@ -1783,7 +1785,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m4.jpg" title="" alt="" />
+									<img src="{% static 'images/m4.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">The standard chunk of Lorem Ipsum used since the</h5>
 									<span class="adprice">$480</span>
@@ -1798,7 +1800,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m5.jpg" title="" alt="" />
+									<img src="{% static 'images/m5.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h5>
 									<span class="adprice">$859</span>
@@ -1813,7 +1815,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m6.jpg" title="" alt="" />
+									<img src="{% static 'images/m6.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">But I must explain to you how all this mistaken idea of denouncing</h5>
 									<span class="adprice">$1299</span>
@@ -1828,7 +1830,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m12.jpg" title="" alt="" />
+									<img src="{% static 'images/m12.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">you need to be sure there isn't anything embarrassing hidden</h5>
 									<span class="adprice">$1090</span>
@@ -1843,7 +1845,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</h5>
 									<span class="adprice">$1099</span>
@@ -1858,7 +1860,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m7.jpg" title="" alt="" />
+									<img src="{% static 'images/m7.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">On the other hand, we denounce with righteous dislike men</h5>
 									<span class="adprice">$290</span>
@@ -1873,7 +1875,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m8.jpg" title="" alt="" />
+									<img src="{% static 'images/m8.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$899</span>
@@ -1888,7 +1890,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m13.jpg" title="" alt="" />
+									<img src="{% static 'images/m13.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">looked up one of the more obscure Latin words</h5>
 									<span class="adprice">$599</span>
@@ -1903,7 +1905,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m9.jpg" title="" alt="" />
+									<img src="{% static 'images/m9.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">ducimus qui blanditiis praesentium voluptatum quos dolores et qua</h5>
 									<span class="adprice">$199</span>
@@ -1918,7 +1920,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m10.jpg" title="" alt="" />
+									<img src="{% static 'images/m10.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$250</span>
@@ -1933,7 +1935,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m12.jpg" title="" alt="" />
+									<img src="{% static 'images/m12.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">you need to be sure there isn't anything embarrassing hidden</h5>
 									<span class="adprice">$1090</span>
@@ -1948,7 +1950,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m11.jpg" title="" alt="" />
+									<img src="{% static 'images/m11.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">who are so beguiled and demoralized by the charms of pleasure of the moment</h5>
 									<span class="adprice">$189</span>
@@ -1964,7 +1966,7 @@ var elem=$('#container ul');
 								
 								<a href="single.html">
 									<li>
-									<img src="images/m4.jpg" title="" alt="" />
+									<img src="{% static 'images/m4.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">The standard chunk of Lorem Ipsum used since the</h5>
 									<span class="adprice">$480</span>
@@ -1979,7 +1981,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m9.jpg" title="" alt="" />
+									<img src="{% static 'images/m9.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">ducimus qui blanditiis praesentium voluptatum quos dolores et qua</h5>
 									<span class="adprice">$199</span>
@@ -1994,7 +1996,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m8.jpg" title="" alt="" />
+									<img src="{% static 'images/m8.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
 									<span class="adprice">$899</span>
@@ -2009,7 +2011,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m12.jpg" title="" alt="" />
+									<img src="{% static 'images/m12.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">you need to be sure there isn't anything embarrassing hidden</h5>
 									<span class="adprice">$1090</span>
@@ -2025,7 +2027,7 @@ var elem=$('#container ul');
 								
 								<a href="single.html">
 									<li>
-									<img src="images/m11.jpg" title="" alt="" />
+									<img src="{% static 'images/m11.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">who are so beguiled and demoralized by the charms of pleasure of the moment</h5>
 									<span class="adprice">$189</span>
@@ -2040,7 +2042,7 @@ var elem=$('#container ul');
 								</a>
 								<a href="single.html">
 									<li>
-									<img src="images/m13.jpg" title="" alt="" />
+									<img src="{% static 'images/m13.jpg' %}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">looked up one of the more obscure Latin words</h5>
 									<span class="adprice">$599</span>
