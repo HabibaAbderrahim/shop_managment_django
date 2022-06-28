@@ -9,6 +9,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!DOCTYPE html>
 <html>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <head>
 <title>Resale a Business Category Flat Bootstrap Responsive Website Template | All Classifieds :: w3layouts</title>
 
@@ -104,16 +106,13 @@ var elem=$('#container ul');
 });
 </script>
 </head>
+
 <body>
-<div class="header">
-		<div class="container">
-			<div class="logo">
-				<a href="index.html"><span>Re</span>sale</a>
-			</div>
-			<div class="header-right">
-			<a class="account" href="login.html">My Account</a>
-			<span class="active uls-trigger">Select language</span>
+    <!--NAVBAR-->
+    {% include "base\navBar.html" %}
+   
 	<!-- Large modal -->
+    
 			<div class="selectregion">
 				<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 				Select Your Region</button>
@@ -518,7 +517,7 @@ var elem=$('#container ul');
 	  <div class="container">    
 			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-			<a href="post-ad.html">Post Free Ad</a>
+			<a href="post-ad.html">Home</a>
 	  </div>
 	</div>
 	<!-- Products -->
@@ -951,7 +950,11 @@ var elem=$('#container ul');
 			</div>
 			<ol class="breadcrumb" style="margin-bottom: 5px;">
 			  <li><a href="index.html">Home</a></li>
-			  <li class="active">All Ads</li>
+			  <li class="active">All products</li>
+              <li class="active">Customers</li>
+              <li class="active">Orders</li>
+
+
 			</ol>
 
             <!--NOOOOOOOO NOOOOOO NOOOO CHANGE-->
@@ -1042,4 +1045,6 @@ var elem=$('#container ul');
 		</footer>
         <!--footer section end-->
 </body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </html>
