@@ -3,6 +3,6 @@ from django.forms import CharField
 
 # Create your models here.
 class Client(models.Model):
-    name= models.CharField(null=True)
+    name= models.CharField(null=True, max_length=200)
     phone =models.CharField(null=True, max_length=50)
     date_create =models.DateTimeField(null=True, auto_now_add=True)
