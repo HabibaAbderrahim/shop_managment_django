@@ -9,11 +9,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!DOCTYPE html>
 <html>
-    <!-- CSS only -->
+<!-- CSS only Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <head>
 <title>Resale a Business Category Flat Bootstrap Responsive Website Template | All Classifieds :: w3layouts</title>
-
+<!-- Link with static :css-->
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/bootstrap-select.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -26,36 +26,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
-
 <link href='{% static '//fonts.googleapis.com/css?family=Ubuntu+Condensed' %}' rel='stylesheet' type='text/css'>
 <link href='{% static '//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' %}' rel='stylesheet' type='text/css'>
-<!--//fonts-->	
-<!-- js -->
+<!--//<!-- Link with static :fonts-->	
+<!-- <!-- Link with static :js -->
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <!-- js -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/bootstrap-select.js' %}"></script>
-<script>
-  $(document).ready(function () {
-    var mySelect = $('#first-disabled2');
+	<script>
+	$(document).ready(function () {
+		var mySelect = $('#first-disabled2');
 
-    $('#special').on('click', function () {
-      mySelect.find('option:selected').prop('disabled', true);
-      mySelect.selectpicker('refresh');
-    });
+		$('#special').on('click', function () {
+		mySelect.find('option:selected').prop('disabled', true);
+		mySelect.selectpicker('refresh');
+		});
 
-    $('#special2').on('click', function () {
-      mySelect.find('option:disabled').prop('disabled', false);
-      mySelect.selectpicker('refresh');
-    });
+		$('#special2').on('click', function () {
+		mySelect.find('option:disabled').prop('disabled', false);
+		mySelect.selectpicker('refresh');
+		});
 
-    $('#basic2').selectpicker({
-      liveSearch: true,
-      maxOptions: 1
-    });
-  });
-</script>
+		$('#basic2').selectpicker({
+		liveSearch: true,
+		maxOptions: 1
+		});
+	});
+	</script>
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 <link href="css/jquery.uls.css" rel="stylesheet"/>
 <link href="css/jquery.uls.grid.css" rel="stylesheet"/>
