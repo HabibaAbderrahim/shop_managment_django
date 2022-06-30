@@ -17,5 +17,5 @@ class Order (models.Model):
     date_create= models.DateTimeField(null=True, auto_now_add=True)
 
     def __str__(self):
-        return (self.product,self.status)
+        return self.status
     
