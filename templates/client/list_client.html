@@ -27,7 +27,7 @@
 		<div class="card card-body">
 			<h5>Total des Commandes</h5>
 			<hr>
-			<h1 style="text-align: center;padding: 10px"></h1>
+			<h1 style="text-align: center;padding: 10px">{{total}}</h1>
 		</div>
 	</div>
 </div>
@@ -53,12 +53,25 @@
 			<table class="table table-sm">
 				<tr>
 					<th>Produit</th>
-					<th>Categorie</th>
-					<th>Date de Commande</th>
+				
+					<th>Order Date</th>
 					<th>Status</th>
-					<th>Mise à Jour</th>
-					<th>Supprimer</th>
+					<th>update</th>
+					<th>Delete</th>
 				</tr>
+
+				{% for p in ordersList %}
+				  <tr>
+					<th>{{p.product}}</th>
+					<th>{{p.date_create}}</th>
+					<th>{{p.status}}</th>
+					<th><a href="">update</a></th>
+					<th><a href="">Status</a></th>
+					
+
+				  </tr>
+				
+				{% endfor %}
 
 			</table>
 		</div>
