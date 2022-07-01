@@ -17,4 +17,5 @@ def home(request):
     #render template with data
     return render(request ,'product\home.html', context)
 
-    
+def detail(request) :
+    return render(request,'product\single.html')   
