@@ -4,32 +4,42 @@
 
 {% block content %}
 	<!--single-page-->
-	<div class="single-page main-grid-border">
-		<div class="container">
 	
+	<div class="single-page main-grid-border">
 			<div class="product-desc">
 				<div class="col-md-7 product-view">
+					<h1>{{productx.name}}</h1>
 					<h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h2>
 					<p> <i class="glyphicon glyphicon-map-marker"></i><a href="#">state</a>, <a href="#">city</a>| Added at 06:55 pm, Ad ID: 987654321</p>
 					<div class="flexslider">
 						<ul class="slides">
-							<li data-thumb="{% static 'images/ss1.jpg' %}">
-								<img src="{% static 'images/ss1.jpg' %}" />
+							<li data-thumb="images/ss1.jpg">
+								<img src="{%static 'images/ss1.jpg'%}" />
 							</li>
-							<li data-thumb="{% static 'images/ss2.jpg' %}">
-								<img src="{% static 'images/ss2.jpg' %}" />
+							<li data-thumb="images/ss2.jpg">
+								<img src="{%static 'images/ss2.jpg'%}" />
 							</li>
-							<li data-thumb="{% static 'images/ss3.jpg' %}">
-								<img src="{% static 'images/ss3.jpg' %}" />
+							<li data-thumb="images/ss3.jpg">
+								<img src="{%static 'images/ss3.jpg'%}" />
 							</li>
 						</ul>
 					</div>
 					<!-- FlexSlider -->
-					
+					  <script defer src="js/jquery.flexslider.js"></script>
+					<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 
-					
+						<script>
+					// Can also be used with $(document).ready()
+					$(window).load(function() {
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						controlNav: "thumbnails"
+					  });
+					});
+					</script>
 					<!-- //FlexSlider -->
 					<div class="product-details">
+						<h4>Name : <a href="#">{{productx.name}}</a></h4>
 						<h4>Brand : <a href="#">Company name</a></h4>
 						<h4>Views : <strong>150</strong></h4>
 						<p><strong>Display </strong>: 1.5 inch HD LCD Touch Screen</p>
@@ -41,7 +51,7 @@
 					<div class="item-price">
 						<div class="product-price">
 							<p class="p-price">Price</p>
-							<h3 class="rate">$ 259</h3>
+							<h3 class="rate">$ {{productx.price}}</h3>
 							<div class="clearfix"></div>
 						</div>
 						<div class="condition">
@@ -51,7 +61,11 @@
 						</div>
 						<div class="itemtype">
 							<p class="p-price">Item Type</p>
-							<h4>Phones</h4>
+							{% comment %} {% for t in tagx  %}
+								<h4>{{t}}</h4>
+							
+							{% endfor %} {% endcomment %}
+							<h4>{{tagX.name}}</h4>
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -78,5 +92,5 @@
 			</div>
 		</div>
 	</div>
-
+	<!--//single-page-->
 {% endblock content %}
