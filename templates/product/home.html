@@ -24,7 +24,7 @@
 				<!-- context={'clients':clients,'orders':orders}-->
 				{% for i in clients %}
 				  <tr><!--each in newrow-->
-				    <th><a href="{% url 'clientDetails' %}">{{i.id}}</a></th><!--url client-->
+				    <th><a href="{% url 'clientDetails' i.id%}">{{i.id}}</a></th><!--url client-->
 					<th>{{i.name}}</th>
 					<th>{{i.phone}}</th>
 				  </tr>

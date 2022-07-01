@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     #the name is used for links 
-    path('',views.list_client, name='clientDetails'),
+    #/client/pk=id
+    path('/<str:pk>',views.list_client,name='clientDetails'),
 ]

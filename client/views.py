@@ -9,7 +9,7 @@ from .models import Client
 #     return render(request ,'client\list_client.html')
 
 #pk to get client id with him details
-def list_client(request , pk):
-    clientKey=Client.objects.gets(id=pk)
-    context = {'clientKey':clientKey}
+def list_client(request ,pk):
+    clientKey=Client.objects.get(id=pk)
+    context ={'client':clientKey}
     return render(request ,'client\list_client.html',context)
