@@ -15,10 +15,21 @@
             </center>
 			<table class="table table-sm">
 				<tr>
-					<th></th>
-					<th>Clients</th>
-					<th>Orders</th>
+					
+					<th>ID</th>
+					<th>Client</th>
+					<th>Phone number</th>
 				</tr>
+				<!--for each key print it data-->
+				<!-- context={'clients':clients,'orders':orders}-->
+				{% for i in clients %}
+				  <tr><!--each in newrow-->
+				    <th>{{i.id}}</th>
+					<th>{{i.name}}</th>
+					<th>{{i.phone}}</th>
+				  </tr>
+					
+				{% endfor %}
 
 			</table>
 		</div>
