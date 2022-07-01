@@ -9,6 +9,7 @@ class Product(models.Model):
     date_create = models.DateTimeField(null=True, auto_now_add=True)
     #many to many 
     tag=models.ManyToManyField(Tag)
+    
     def __str__(self):
         return self.name
     
