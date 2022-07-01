@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.list_client,name='clientDetails')
+    #the name is used for links 
+    path('',views.list_client, name='clientDetails'),
 ]
