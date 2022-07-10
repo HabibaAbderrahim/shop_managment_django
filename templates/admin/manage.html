@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+<br>
+<div class="row">
+	<div class="col-md-5">
+		<h5 class="sear-head" >Clients</h5>
+		<hr>
+		<div class="card card-body">
+            <center>
+			<a class="account" href="">Create new Client</a>
+            </center>
+			<table class="table table-sm">
+				<tr>
+					
+					<th>ID</th>
+					<th>Client</th>
+					<th>Phone number</th>
+				</tr>
+				<!--for each key print it data-->
+				<!-- context={'clients':clients,'orders':orders}-->
+				{% for i in clients %}
+				  <tr><!--each in newrow-->
+				    <th><a href="{% url 'clientDetails' i.id%}">{{i.id}}</a></th><!--url client-->
+					<th>{{i.name}}</th>
+					<th>{{i.phone}}</th>
+				  </tr>
+					
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h5 class="sear-head">Last 5 Orders</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="account" href="">Add order</a>
+			<table class="table table-sm">
+				<!--Frist Row-->
+				<tr>
+					<th>Client</th>
+					<th>Product</th>
+					<th>Date order</th>
+					<th>Status</th>
+					<th>update </th>
+					<th>Delete</th>
+				</tr>
+			<!--Second Row-->
+            <!--for each key print it data-->
+			 <!--     context={'clients':clients,'orders':orders,'product':products} -->
+			 {% for c in orders  %}
+			   <tr>
+				<th>{{c.client.id}}</th>
+				<th>{{c.product}}</th>
+				<th>{{c.date_create}}</th>
+				<th>{{c.status}}</th>
+				<th>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eyedropper" viewBox="0 0 16 16">
+						<path d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.853a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708l-2-2zM2 12.707l7-7L10.293 7l-7 7H2v-1.293z"/>
+					  </svg>
+				</th>
+				<th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+					<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+				  </svg></th>
+				
+
+			   </tr>
+			 
+			 {% endfor %}
+			</table>
+		</div>
+	</div>
+
+</div>
+{% endblock content %}

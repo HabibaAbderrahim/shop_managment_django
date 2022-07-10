@@ -24,6 +24,15 @@ def home(request ):
     #render template with data
     return render(request ,'product\home.html', context)
 
+def manage(request):
+    clients= Client.objects.all()
+    orders=Order.objects.all()
+    products=Product.objects.all()
+    context={'clients':clients,'orders':orders,'product':products}
+    #render template with data
+    return render(request ,'admin\manage.html', context)
+    
+
 def detail(request , pk) :
     productX = Product.objects.get(id=pk)
     #filter
