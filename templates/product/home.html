@@ -209,7 +209,14 @@
 
 											<h4 class="title">There are many variations of passages of Lorem Ipsum</h4>
 											<span class="adprice">${{p.price}}</span>
-											<p class="catpath">{{p.tag.name}}</p>
+											 
+											<p class="catpath">
+												
+												{% for t in tags %}
+												   {{t}}
+												{% endfor %}
+											
+											</p>
 											</section>
 											<section class="list-right">
 											<span class="date">{{p.date_create}}</span>
