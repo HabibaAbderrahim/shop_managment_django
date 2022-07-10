@@ -8,4 +8,4 @@ def list_order(request):
 
 
 def add_order(request):
-    return render(request,'order\add_order.html')
+    return render(request ,'order\order_add.html')
