@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def list_order(request):
     return render(request ,'order\list_order.html')
+
+
+def add_order(request):
+    return render(request,'order\add_order.html')
