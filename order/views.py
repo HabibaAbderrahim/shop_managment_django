@@ -19,6 +19,6 @@ def add_order(request):
             #save data
             form.save()
             msg="Added Succefully!"
-            redirect("/",msg)
-    context={'forms':form ,'msg':msg}        
+            redirect("/")
+    context={'forms':form}        
     return render(request ,'order\order_add.html',context)

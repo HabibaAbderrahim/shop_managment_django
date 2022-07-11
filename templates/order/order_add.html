@@ -4,6 +4,10 @@
 
 {% block content %}
 
-<h1>Hellllooo</h1>
+<form action ="" method="POST">
+    {% csrf_token %}
+    {{forms}}
+    <input type="submit" name="add">
+</form>
 
 {% endblock content %}
