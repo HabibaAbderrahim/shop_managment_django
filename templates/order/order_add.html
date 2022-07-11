@@ -7,7 +7,7 @@
 <form action ="" method="POST">
     {% csrf_token %}
     {{forms}}
-    <input type="submit" name="add">
+    <input type="submit" name="add"><p>{{msg}}</p>
 </form>
 
 {% endblock content %}

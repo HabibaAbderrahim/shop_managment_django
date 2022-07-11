@@ -2,6 +2,7 @@ from multiprocessing import context
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .forms import OrderForm
+from product.views import manage
 
 # Create your views here.
 
@@ -14,11 +15,10 @@ def add_order(request):
     form = OrderForm()
     if request.method=='POST':
         #render with data
-        form = OrderForm(request.Post)
+        form = OrderForm(request.POST)
         if form.is_valid():
             #save data
             form.save()
-            msg="Added Succefully!"
-            redirect("/")
+            return redirect(manage)
     context={'forms':form}        
     return render(request ,'order\order_add.html',context)
