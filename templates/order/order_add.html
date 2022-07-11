@@ -8,9 +8,28 @@
     <div class="card-body">
         <form action ="" method="POST">
            {% csrf_token %}
-            {{forms}}
+              {{forms}}
+            
+            {% comment %} <h4>Client</h4>
+            <select class="form-select">
+                {% for c in forms.client  %}
+                  <option value="c"> {{c}}<option>
+                {% endfor %}
+              </select>
 
-         
+              <h4>Product</h4>
+              <select class="form-select">
+                  {% for p in forms.product  %}
+                  <option value="c">{{p}}<option>
+                  {% endfor %}
+                </select>
+
+                <h4>Status</h>
+                <select class="form-select">
+                    {% for s in forms.status  %}
+                    <option value="c">{{s}}<option>
+                    {% endfor %}
+                  </select> {% endcomment %}
 
 
             {% comment %} <div class="mb-3 row">
