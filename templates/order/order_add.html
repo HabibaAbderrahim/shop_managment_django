@@ -4,10 +4,50 @@
 
 {% block content %}
 
-<form action ="" method="POST">
-    {% csrf_token %}
-    {{forms}}
-    <input type="submit" name="add"><p>{{msg}}</p>
-</form>
+<div class="card">
+    <div class="card-body">
+        <form action ="" method="POST">
+
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Client</label>
+                    <select class="form-select" aria-label="Default select example">
+                        
+                        {% for c in forms.client  %}
+                            <option>{{c}}</option>
+                        {% endfor %}
+                        
+                    </select>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Product</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        
+                        {% for p in forms.product  %}
+                            <option>{{p}}</option>
+                        {% endfor %}
+                        
+                    </select>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Status</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        
+                        {% for s in forms.status  %}
+                            <option>{{s}}</option>
+                        {% endfor %}
+                        
+                    </select>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-warning" type="button">SUBMIT</button>
+            </div>
+
+        
+        </form>
+    </div>
+</div>
 
 {% endblock content %}
