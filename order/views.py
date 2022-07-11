@@ -1,5 +1,6 @@
+from multiprocessing import context
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .forms import OrderForm
 
 # Create your views here.
@@ -9,6 +10,15 @@ def list_order(request):
 
 
 def add_order(request):
-    #call form
+    #call empty form
     form = OrderForm()
-    return render(request ,'order\order_add.html')
+    if request.method=='POST':
+        #render with data
+        form = OrderForm(request.Post)
+        if form.is_valid():
+            #save data
+            form.save()
+            msg="Added Succefully!"
+            redirect("/",msg)
+    context={'forms':form ,'msg':msg}        
+    return render(request ,'order\order_add.html',context)
