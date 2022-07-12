@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<p>Do you really want to delete this order ? <p>
+   
+     
+<form action="{% url 'delete_order' order.id %}" method="POST">
+    {% csrf_token %}
+
+    
+          <a class="btn btn-warning" href="{% url 'manage' %}">cancel</a>
+          <input type ="submit"  class="btn btn-warning" name ="submit" />
+
+</form> 
+
+{% endblock content %}
+

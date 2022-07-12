@@ -40,11 +40,13 @@ def modify_order(request , pk):
     return render(request ,'order\order_add.html',context)
 
 
-def delete_order(request ,pk):
+def delete_order(request , pk):
     order=Order.objects.get(id=pk)
     #based on request
     if request.method=='POST':
         order.delete()
         return redirect(manage)
     context={'order':order}
-    return render(request ,'admin\manage.html' )
+
+    return render(request ,'order\delete_order.html',context)
+
