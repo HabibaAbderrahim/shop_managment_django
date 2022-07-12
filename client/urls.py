@@ -5,4 +5,5 @@ urlpatterns = [
     #the name is used for links 
     #/client/pk=id
     path('<str:pk>',views.list_client,name='clientDetails'),
+    path('add_client' , views.create_client , name="add_client")
 ]
