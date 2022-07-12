@@ -38,3 +38,13 @@ def modify_order(request , pk):
     context={'forms':form}      
     #where the form is  
     return render(request ,'order\order_add.html',context)
+
+
+def delete_order(request ,pk):
+    order=Order.objects.get(id=pk)
+    #based on request
+    if request.method=='POST':
+        order.delete()
+        return redirect(manage)
+    context={'order':order}
+    return render(request ,'admin\manage.html' )
