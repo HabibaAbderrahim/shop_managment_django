@@ -26,14 +26,18 @@ def list_client(request ,pk):
     context ={'clientX':clientKey ,'ordersList':ordersList,'total':total}
     return render(request ,'client\list_client.html',context)
 
-def create_client(request):
+def add_client(request):
+    #call empty form
     form = ClientForm()
-    if request.method=="POST":
+    if request.method=='POST':
+        #render with data
         form = ClientForm(request.POST)
-        form.save()
-        return redirect(manage)
-    context={'form':form}
-    return render(request ,'client\add_client.html',context)
+        if form.is_valid():
+            #save data
+            form.save()
+            return redirect(manage)
+    context={'formClient':form}        
+    return render(request ,'client\client_add.html',context)
 
 
 
