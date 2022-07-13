@@ -12,14 +12,16 @@ from .filters import ProductFilter
 # Create your views here.
 
 def home(request ):
-    pk=1
+    # pk=1
     products=Product.objects.all()
-    tags=Product.objects.get(id=pk).tag.all()
+    # tags=Product.objects.get(id=pk).tag.all()
     #Filter sorted By price
     #since we are getting products
     filters= ProductFilter(request.GET, queryset=products)
+    #!!Update commands
+    products=filters.qs
     #dict key value
-    context={'product':products,'tags':tags,'filters':filters}
+    context={'product':products,'filters':filters}
 
     #render template with data
     return render(request ,'product\home.html', context)

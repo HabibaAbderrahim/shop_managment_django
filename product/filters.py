@@ -6,4 +6,5 @@ from .models import Product
 class ProductFilter(django_filters.FilterSet):
     class Meta:
         model= Product
-        fields = 'price'
+        fields = '__all__'
+        exclude = ['name','date_create','tag']
