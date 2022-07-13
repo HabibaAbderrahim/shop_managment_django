@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'client',
     'order',
     'product',
-    'tag'
+    'tag',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
