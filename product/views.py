@@ -8,18 +8,18 @@ from client.models import Client
 from order.models import Order
 from product.models import Product
 from tag.models import Tag
+from .filters import ProductFilter
 # Create your views here.
 
 def home(request ):
     pk=1
-    #findall from model
-    clients= Client.objects.all()
-    orders=Order.objects.all()
     products=Product.objects.all()
-    #filtring
     tags=Product.objects.get(id=pk).tag.all()
+    #Filter sorted By price
+    #since we are getting products
+    filters= ProductFilter(request.GET, queryset=products)
     #dict key value
-    context={'clients':clients,'orders':orders,'product':products,'tags':tags}
+    context={'product':products,'tags':tags,'filters':filters}
 
     #render template with data
     return render(request ,'product\home.html', context)
