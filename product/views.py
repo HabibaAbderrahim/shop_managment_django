@@ -36,7 +36,6 @@ def manage(request):
 def detail(request , pk) :
     productX = Product.objects.get(id=pk)
     #filter
-
     tagX =Product.objects.get(id=pk).tag.all()
     context ={'productx':productX , 'tagx':tagX}
 
