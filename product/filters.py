@@ -8,3 +8,7 @@ class ProductFilter(django_filters.FilterSet):
         model= Product
         fields = '__all__'
         exclude = ['name','date_create','tag']
+
+    
+
+

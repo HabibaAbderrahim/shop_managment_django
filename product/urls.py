@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     path('', views.home),
     path('product/<str:pk>', views.detail,name="productDetail"),
-    path('manage', views.manage, name="manage")
+    path('manage', views.manage, name="manage"),
+    path('product/filter', views.FilerByName,name="productFilterName")
 ]
