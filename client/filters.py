@@ -7,4 +7,4 @@ class ClientFilter(django_filters.FilterSet):
     class Meta:
         model = Order
         fields = '__all__'
-        exclude =['client',' date_create']
+        exclude =['client','date_create']
