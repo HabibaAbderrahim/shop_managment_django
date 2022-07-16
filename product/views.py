@@ -11,6 +11,7 @@ from product.models import Product
 from tag.models import Tag
 from .filters import ProductFilter
 from django.db.models.functions import Lower
+from django.db.models import Q
 # Create your views here.
 
 def home(request ):
@@ -33,10 +34,43 @@ def home(request ):
     #render template with data
     return render(request ,'product\home.html', context)
 
+# def FilerByName(self, *args, **kwargs):     
+#     qs = super(Product, self).FilerByName(*args, **kwargs) 
+#     query = self.request.GET.get('q') 
+#     if query: 
+#         qs = self.model.objects.filter( 
+#             Q(name__icontains=query) 
+ 
+#         ) 
+#         context={'filterName':qs}
+#     return render(self ,'product\search.html', context)
+
+       
+
+# def FilerByName(request):
+#     try:
+#        query = int(request.GET.get('q'))
+#     except:
+#         query=None
+#     qs= Product.objects.all()
+#     if query  : 
+#         qs = Product.objects.filter( 
+#              Q(name__icontains=query) )
+#     context={'filterName':qs}
+
+#     return render(request ,'product\search.html', context)
+
 def FilerByName(request):
-    ProductName =Product.objects.filter(name__regex='^[A-Za-z]')
-    context={'ProductName': ProductName}
-    return context
+    search_post = request.GET.get('search')
+    if search_post:
+        posts = Product.objects.filter(Q(name__icontains=search_post))
+    else:
+        # If not searched, return default posts
+        posts = Product.objects.all().order_by("-date_create")
+    context={'posts':posts}
+    return render(request ,'product\search.html', context)
+         
+    
 
 def manage(request):
     clients= Client.objects.all()
