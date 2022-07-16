@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+					{% for object in posts %}
+                    {% comment %} {% if object.name %} {% endcomment %}
+                                <ul class="list">
+                                    <li>
+                                            <img src="{% static 'images/m1.jpg' %}" title="" alt="" />
+                                            <section class="list-left">
+                                            <h5 class="title">{{object.name}}</h5>
+
+                                            <h4 class="title">There are many variations of passages of Lorem Ipsum</h4>
+                                            <span class="adprice">${{object.price}}</span>
+                                            
+                                            <p class="catpath">
+                                                
+                                                {% for t in tags %}
+                                                {{t}}
+                                                {% endfor %}
+                                            
+                                            </p>
+                                            </section>
+                                            <section class="list-right">
+                                            <span class="date">{{object.date_create}}</span>
+                                            
+                                            </section>
+                                            <div class="clearfix"></div>
+                                        </li> 
+                                    
+                                    </a>
+
+                                    
+        
+                                    
+                                <div class="clearfix"></div>
+                                
+                            </ul>
+
+                    
+                    
+                    {% comment %} {% endif %} {% endcomment %}
+                    
+                {% endfor %}
+
+{% endblock content %}
