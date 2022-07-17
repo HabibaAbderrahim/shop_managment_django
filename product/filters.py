@@ -7,7 +7,7 @@ class ProductFilter(django_filters.FilterSet):
     class Meta:
         model= Product
         fields = '__all__'
-        exclude = ['name','date_create','tag']
+        exclude = ['name','date_create','tag','image_product']
 
     
 

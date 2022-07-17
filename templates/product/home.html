@@ -151,7 +151,8 @@
 									{% for p in product %}
 									  <a href="{% url 'productDetail' p.id  %}">
 									   <li>
-											<img src="{% static 'images/m1.jpg' %}" title="" alt="" />
+											{% comment %} <img src="{% static 'images/m1.jpg' %}" title="" alt="" /> {% endcomment %}
+											<img src="{{p.image_product}}">
 											<section class="list-left">
 											<h5 class="title">{{p.name}}</h5>
 
