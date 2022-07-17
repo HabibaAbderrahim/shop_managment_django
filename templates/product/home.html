@@ -151,21 +151,21 @@
 									{% for p in product %}
 									  <a href="{% url 'productDetail' p.id  %}">
 									   <li>
-											{% comment %} <img src="{% static 'images/m1.jpg' %}" title="" alt="" /> {% endcomment %}
-											<img src="{{p.image_product}}">
+											<img src="{{p.image_product.url}}" title="" alt="" />
+											
 											<section class="list-left">
 											<h5 class="title">{{p.name}}</h5>
 
 											<h4 class="title">There are many variations of passages of Lorem Ipsum</h4>
 											<span class="adprice">${{p.price}}</span>
 											 
-											<p class="catpath">
+											{% comment %} <p class="catpath">
 												
 												{% for t in tags %}
 												   {{t}}
 												{% endfor %}
 											
-											</p>
+											</p> {% endcomment %}
 											</section>
 											<section class="list-right">
 											<span class="date">{{p.date_create}}</span>

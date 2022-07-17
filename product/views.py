@@ -17,19 +17,18 @@ from django.db.models import Q
 def home(request ):
     pk=1
     products=Product.objects.all()
-    tags=Product.objects.get(id=pk).tag.all()
-    pp=Product.objects.order_by(Lower('price').desc())
+   
+   
     #Filter sorted By price
     #since we are getting products
     #Entry.objects.order_by(Lower('headline').desc())
     filters= ProductFilter(request.GET, queryset=products)
     #!!Update commands
     products=filters.qs
-    #name contains 
-    ProductName=Product.objects.filter(name__regex='^[A-Za-z]')
+    
     
     #dict key value
-    context={'product':products,'filters':filters,'tags':tags,'ProductName': ProductName}
+    context={'product':products,'filters':filters}
 
     #render template with data
     return render(request ,'product\home.html', context)
