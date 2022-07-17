@@ -4,45 +4,120 @@
 
 {% block content %}
 
-					{% for object in posts %}
-                    {% comment %} {% if object.name %} {% endcomment %}
-                                <ul class="list">
-                                    <li>
-                                            <img src="{% static 'images/m1.jpg' %}" title="" alt="" />
-                                            <section class="list-left">
-                                            <h5 class="title">{{object.name}}</h5>
+<div class="ads-display col-md-9">
+    <div class="wrapper">					
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+      <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
+            <span class="text">All Ads</span>
+          </a>
+        </li>
+        <li role="presentation" class="next">
+          <a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">
+            <span class="text">Ads with Photos</span>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#samsa" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+            <span class="text">Company</span>
+          </a>
+        </li>
+      </ul>
+      <div id="myTabContent" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+           <div>
+                                <div id="container">
+                <div class="view-controls-list" id="viewcontrols">
+                    <label>view :</label>
+                    <a class="gridview"><i class="glyphicon glyphicon-th"></i></a>
+                    <a class="listview active"><i class="glyphicon glyphicon-th-list"></i></a>
+                </div>
+            
+                <div class="sort">
+                   <div class="sort-by">
+                    <form method="GET">	
+                        <label>Sort By : </label>
+                              {{filters.form}}
 
-                                            <h4 class="title">There are many variations of passages of Lorem Ipsum</h4>
-                                            <span class="adprice">${{object.price}}</span>
-                                            
-                                            <p class="catpath">
-                                                
-                                                {% for t in tags %}
-                                                {{t}}
-                                                {% endfor %}
-                                            
-                                            </p>
-                                            </section>
-                                            <section class="list-right">
-                                            <span class="date">{{object.date_create}}</span>
-                                            
-                                            </section>
-                                            <div class="clearfix"></div>
-                                        </li> 
-                                    
-                                    </a>
+                              <button class="btn btn-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg></button>
+                        {% comment %} <select>
+                                        <option value="">Most recent</option>
+                                        <option value="">Price: Rs Low to High</option>
+                                        <option value="">Price: Rs High to Low</option>
+                        </select> {% endcomment %}
+                    </form>
+                       </div>
+                     </div>
+                    
+                <div class="clearfix"></div>
+                {% for object in posts %}
+                {% comment %} {% if object.name %} {% endcomment %}
+                            <ul class="list">
+                                <li>
+                                    <img src="{{object.image_product.url}}" title="" alt="" />
 
-                                    
-        
-                                    
-                                <div class="clearfix"></div>
+                                        <section class="list-left">
+                                        <h5 class="title">{{object.name}}</h5>
+
+                                        <h4 class="title">There are many variations of passages of Lorem Ipsum</h4>
+                                        <span class="adprice">${{object.price}}</span>
+                                        
+                                        <p class="catpath">
+                                            
+                                            {% for t in tags %}
+                                            {{t}}
+                                            {% endfor %}
+                                        
+                                        </p>
+                                        </section>
+                                        <section class="list-right">
+                                        <span class="date">{{object.date_create}}</span>
+                                        
+                                        </section>
+                                        <div class="clearfix"></div>
+                                    </li> 
                                 
-                            </ul>
+                                </a>
 
-                    
-                    
-                    {% comment %} {% endif %} {% endcomment %}
-                    
-                {% endfor %}
+                                
+    
+                                
+                            <div class="clearfix"></div>
+                            
+                        </ul>
 
+                
+                
+                {% comment %} {% endif %} {% endcomment %}
+                
+            {% endfor %}
+
+
+
+        </div>
+            </div>
+        
+        </div>
+            </div>
+        </div>
+        <ul class="pagination pagination-sm">
+            <li><a href="#">Prev</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+					
 {% endblock content %}
