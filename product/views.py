@@ -13,19 +13,18 @@ from .filters import ProductFilter
 from django.db.models.functions import Lower
 from django.db.models import Q
 # Create your views here.
+from order.models import Order
+
 
 def home(request ):
     pk=1
     products=Product.objects.all()
-   
-   
-    #Filter sorted By price
     #since we are getting products
     #Entry.objects.order_by(Lower('headline').desc())
     filters= ProductFilter(request.GET, queryset=products)
     #!!Update commands
     products=filters.qs
-    
+   
     
     #dict key value
     context={'product':products,'filters':filters}
@@ -33,31 +32,7 @@ def home(request ):
     #render template with data
     return render(request ,'product\home.html', context)
 
-# def FilerByName(self, *args, **kwargs):     
-#     qs = super(Product, self).FilerByName(*args, **kwargs) 
-#     query = self.request.GET.get('q') 
-#     if query: 
-#         qs = self.model.objects.filter( 
-#             Q(name__icontains=query) 
- 
-#         ) 
-#         context={'filterName':qs}
-#     return render(self ,'product\search.html', context)
 
-       
-
-# def FilerByName(request):
-#     try:
-#        query = int(request.GET.get('q'))
-#     except:
-#         query=None
-#     qs= Product.objects.all()
-#     if query  : 
-#         qs = Product.objects.filter( 
-#              Q(name__icontains=query) )
-#     context={'filterName':qs}
-
-#     return render(request ,'product\search.html', context)
 
 def FilerByName(request):
     search_post = request.GET.get('search')
@@ -84,6 +59,12 @@ def detail(request , pk) :
     productX = Product.objects.get(id=pk)
     #filter
     tagX =Product.objects.get(id=pk).tag.all()
-    context ={'productx':productX , 'tagx':tagX}
+    #count
+    #orders of specific product
+    ordersList=productX.order_set.all()
+    #total
+    total = ordersList.count()
+
+    context ={'productx':productX , 'tagx':tagX , 'tot':total}
 
     return render(request,'product\single.html',context)   

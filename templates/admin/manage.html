@@ -38,6 +38,49 @@
 		</div>
 	</div>
 
+
+	<!--Product-->
+	<div class="col-md-5">
+		<h5 class="sear-head" >Products</h5>
+		<hr>
+		<div class="card card-body">
+            <center>
+			<a class="account" href="{% url 'add_client' %}">Create new Product</a>
+            </center>
+			<table class="table table-sm">
+				<tr>
+					
+					<th>ID</th>
+					<th>Product</th>
+					<th>Price$
+					</th>
+                    {% comment %} <th>Image</th> {% endcomment %}
+					<th>Count orders<th>
+				</tr>
+				<!--for each key print it data-->
+				<!-- context={'clients':clients,'orders':orders}-->
+				{% for i in product %}
+				  <tr><!--each in newrow-->
+				    <th><a href="#">{{i.id}}</a></th><!--url client-->
+					<th>{{i.name}}</th>
+					<th>{{i.price}}</th>
+					{% comment %} <th>{{i.image_product}}</th> {% endcomment %}
+					<th>{{tot}}</th>
+
+                    {% comment %} <th><a class="btn btn-light" href= "{% url 'clientDetails' i.id %}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                      </svg></a></th> {% endcomment %}
+				  </tr>
+					
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+
+	<!--Orders-->
+
 	<div class="col-md-7">
 		<h5 class="sear-head">Last 5 Orders</h5>
 		<hr>
