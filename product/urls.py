@@ -21,5 +21,8 @@ urlpatterns = [
     path('', views.home),
     path('product/<str:pk>', views.detail,name="productDetail"),
     path('manage', views.manage, name="manage"),
-    path('filter', views.FilerByName,name="index")
+    path('filter', views.FilerByName,name="index"),
+    path('add_product', views.addProduct,name="product_add"),
+
+
 ]

@@ -1,12 +1,11 @@
-from dataclasses import fields
-import imp
-from pyexpat import model
-from sqlite3 import PrepareProtocol
+
+from logging import exception
 from django.forms import ModelForm
 from .models import Product 
 
 class ProductForm(ModelForm):
     class Meta:
-        model = PrepareProtocol
+        model = Product
         fields= '__all__'
+        exclude = ['image_product']
        

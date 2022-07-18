@@ -74,15 +74,17 @@ def detail(request , pk) :
 
 
 def addProduct(request):
-    formProduct = ProductForm()
-    if request.method =="POST":
-        formProduct = ProductForm(request.POST)
-        if formProduct.is_valid :
-            formProduct.save()
-            redirect(manage)
-    context={'formProduct': formProduct}
-
-    return render(request ,'product\add_product.html', context)
+    #call empty form
+    form = ProductForm()
+    if request.method=='POST':
+        #render with data
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            #save data
+            form.save()
+            return redirect(manage)
+    context={'formP':form}        
+    return render(request ,'product\product_add.html',context)
 
 
 
