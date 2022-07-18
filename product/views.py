@@ -1,10 +1,12 @@
 from http import client
+import imp
 from msilib import Table
 from multiprocessing import context
+from re import M
 import string
 from unicodedata import name
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from client.models import Client
 from order.models import Order
 from product.models import Product
@@ -14,6 +16,7 @@ from django.db.models.functions import Lower
 from django.db.models import Q
 # Create your views here.
 from order.models import Order
+from .forms import ProductForm
 
 
 def home(request ):
@@ -68,3 +71,18 @@ def detail(request , pk) :
     context ={'productx':productX , 'tagx':tagX , 'tot':total}
 
     return render(request,'product\single.html',context)   
+
+
+def addProduct(request):
+    formProduct = ProductForm()
+    if request.method =="POST":
+        formProduct = ProductForm(request.POST)
+        if formProduct.is_valid :
+            formProduct.save()
+            redirect(manage)
+    context={'formProduct': formProduct}
+
+    return render(request ,'product\add_product.html', context)
+
+
+
